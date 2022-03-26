@@ -10,3 +10,6 @@
 ## Lekce 3
 - FizzBuzz (podmínky a cykly)
 - Domácí úkol — cykly
+
+## Lekce 5
+- Pokojové rostliny
