@@ -18,7 +18,7 @@
 - dobrovolný úkol, bude doplněn
 
 ## Lekce 7
-- samostatný repositář ukol7Lekce
+- samostatný repositář Lekce7-ukol
 
 ## Lekce 8
 - Třída
