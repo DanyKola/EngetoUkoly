@@ -13,3 +13,12 @@
 
 ## Lekce 5
 - Pokojové rostliny
+
+## Lekce 6
+- dobrovolný úkol, bude doplněn
+
+## Lekce 7
+- Samostatný repositář Lekce7-ukol
+
+## Lekce 8
+- Třída
