@@ -22,3 +22,6 @@
 
 ## Lekce 8
 - Třída
+
+## Lekce 9
+- Večeřící filozofové
