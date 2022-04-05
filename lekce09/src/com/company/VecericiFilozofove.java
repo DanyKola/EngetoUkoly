@@ -5,10 +5,12 @@ import java.util.Random;
 import java.util.concurrent.locks.Lock;
 
 public class VecericiFilozofove implements Runnable {
+    public static final int BOUND = 10;
     Random nahodneCislo = new Random();
     private int filozofId;
     private Lock pravaVidlicka;
     private Lock levaVidlicka;
+
 
 //Konstruktor
 
@@ -18,17 +20,20 @@ public class VecericiFilozofove implements Runnable {
         this.levaVidlicka = levaVidlicka;
     }
 
+
 //Filozofové přemýšlí, zvednou levou vidličku, pravou vidličku, pojídá, položí vidličky
     @Override
     public void run() {
         try {
-            while (true) {
+
+             for (int i = 1; i <= 10000; i++) {
                 premysli();
                 zvedneLevouVidlicku();
                 zvednePravouVidlicku();
                 pojida();
                 poloziVidlicku();
-            }
+
+        }
         } catch (InterruptedException e) {
             System.out.println("Vlákno filozofa " + filozofId + " bylo přerušeno.");
         }
@@ -37,7 +42,7 @@ public class VecericiFilozofove implements Runnable {
     public void premysli() throws InterruptedException {
         System.out.println("Filozof jménem: " + filozofId + " přemýšlí.");
         System.out.flush();//vyprázdnění obsahu vyrovnávací paměti do výstupního proudu
-        Thread.sleep(nahodneCislo.nextInt(10));
+        Thread.sleep(nahodneCislo.nextInt(BOUND));
     }
 
     public void zvedneLevouVidlicku() {
@@ -55,7 +60,7 @@ public class VecericiFilozofove implements Runnable {
     public void pojida() throws InterruptedException {
         System.out.println("Filozof jménem: " + filozofId + " pojídá.");
         System.out.flush();
-        Thread.sleep(nahodneCislo.nextInt(10));
+        Thread.sleep(nahodneCislo.nextInt(BOUND));
     }
 
     public void poloziVidlicku() {
